@@ -22,7 +22,7 @@
 
     <div class="w3-container w3-blue w3-cell">
         <a href="index.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white"><h2>Home</h2></a>
-        <a href="sorry.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white"><h2>About</h2></a>
+        <a href="about.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white"><h2>About</h2></a>
         <a href="sorry.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white"><h2>Contact</h2></a>
     </div>
         
@@ -48,6 +48,7 @@
       
 </div>
       </div>
+</div>
  
 
 
