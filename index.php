@@ -2,9 +2,10 @@
 
 <html>
     <head>
+        <?php include 'header.php' ?>
         <title>MathMatch</title>
     <br>
-    <?php include 'header.php' ?>
+    
 </head>
 <body>
     <?php include 'chalkboard-bg.php'; ?>

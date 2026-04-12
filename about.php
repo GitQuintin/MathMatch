@@ -1,11 +1,11 @@
 <html>
-    <head>
+    <head class="w3-section">
         <title>What is MathMatch?</title>
         <?php include 'header.php' ?>
     </head>
     <body>
         <?php include 'chalkboard-bg.php'; ?>
-        <div class="w3-container">
+        <div class="w3-section w3-margin-top w3-padding-48">
             <button onClick="myFunction('about1')" class="w3-btn w3-block w3-left-align">What is MathMatch?
             </button>
             <div id="about1" class="w3-container w3-animate-left w3-hide">MathMatch is a new way to study for your classes,
@@ -49,7 +49,10 @@
                 </p>
             </div>
         </div>
-        <?php include 'footer.php' ?>
+        <footer class="w3-section">
+          <?php include 'footer.php' ?>
+        </footer>
+
 
         <script>
             function myFunction(id) {
