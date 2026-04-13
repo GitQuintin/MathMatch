@@ -1,3 +1,10 @@
+<?php
+require 'DBConnect.php';
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,13 +22,19 @@
   <a href="sorry.php" class="w3-bar-item w3-button">Question Board</a>
   <a href="sorry.php" class="w3-bar-item w3-button">Class Tutoring Calendar</a>
   <a href="sorry.php" class="w3-bar-item w3-button">Miscellaneous</a>
+  <?php if (isset($_SESSION['username']) && ($_SESSION['usertype']) == 1): ?>
+    <a href="registerClass.php" class="w3-bar-item w3-button">Class Registration</a>
+  <?php endif; ?>
 </div>
 
 <div id="main">
     <div class="w3-cell-row" style="width:100%">
-
     <div class="w3-container w3-blue w3-cell">
-        <a href="index.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white"><h2>Home</h2></a>
+        <?php if (isset($_SESSION['username']) && ($_SESSION['usertype']) == 1): ?>
+            <a href="welcomeAdmin.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white"><h2>Welcome, <?php echo $_SESSION['username'] ?></h2></a>
+        <?php else: ?>
+            <a href="index.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white"><h2>Home</h2></a>
+        <?php endif; ?>
         <a href="sorry.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white"><h2>About</h2></a>
         <a href="sorry.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white"><h2>Contact</h2></a>
     </div>
