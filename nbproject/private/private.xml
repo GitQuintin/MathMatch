@@ -7,6 +7,12 @@
             <file>file:/C:/xampp/htdocs/MathMatch/about.php</file>
             <file>file:/C:/xampp/htdocs/MathMatch/footer.php</file>
             <file>file:/C:/xampp/htdocs/MathMatch/header.php</file>
+            <file>file:/C:/xampp/htdocs/MathMatch/signup.php</file>
+            <file>file:/C:/xampp/htdocs/MathMatch/login.php</file>
+            <file>file:/C:/xampp/htdocs/MathMatch/loginAction.php</file>
+            <file>file:/C:/xampp/htdocs/MathMatch/forgotAction.php</file>
+            <file>file:/C:/xampp/htdocs/MathMatch/forgot.php</file>
+            <file>file:/C:/xampp/htdocs/MathMatch/chalkboard-bg.php</file>
         </group>
     </open-files>
 </project-private>
