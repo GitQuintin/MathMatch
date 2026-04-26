@@ -39,7 +39,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-    height: 100%;
+    height: 120%; /* adjusted from 100 */
 }
 
 body {
