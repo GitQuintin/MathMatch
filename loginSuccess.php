@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathMatch – Welcome</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
-    <?php include 'header.php' ?>
+<?php $pageTitle = 'Welcome'; ?>
+<?php include 'header.php'; ?>
     <?php include 'chalkboard-bg.php'; ?>
     <style>
 
@@ -83,12 +76,9 @@
             margin-top: 1.5rem;
             font-size: 0.8rem;
             color: var(--chalk-faint);
-            font-family: 'JetBrains Mono', monospace;
             font-weight: 300;
         }
     </style>
-</head>
-<body>
 
 <div class="page">
     <div class="card">
@@ -105,5 +95,3 @@
 </div>
 
 <?php include 'footer.php' ?>
-</body>
-</html>

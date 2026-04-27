@@ -57,8 +57,8 @@ if (!$user) {
     exit;
 }
 
-// Case-insensitive comparison so "chance" matches "Chance"
-if (strcasecmp(trim($user['security_answer']), $answer) !== 0) {
+// Use password_verify() because security answers are stored as bcrypt hashes
+if (!password_verify(strtolower($answer), $user['security_answer'])) {
     header('Location: forgotFailure.php');
     exit;
 }
