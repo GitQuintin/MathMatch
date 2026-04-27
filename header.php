@@ -1,5 +1,9 @@
 <?php
 require 'DBConnect.php';
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 <head>
   <meta charset="utf-8">
@@ -16,8 +20,16 @@ require 'DBConnect.php';
     <button id="openNav" class="w3-bar-item w3-button w3-blue w3-hover-black w3-hover-text-white w3-left w3-xlarge" onclick="w3_open()">MathMatch <?php "\n" ?> </button>
     <a href="index.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white w3-xlarge">Home</a>
     <a href="about.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white w3-xlarge">About</a>
+    <div class="w3-right">
     <a href="signup.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white w3-right w3-xlarge">Sign Up!</a>
-    <a href="login.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white w3-right w3-xlarge">Login</a>
+    </div>
+    <div class="w3-right">
+        <?php if (!empty($_SESSION['loggedin'])): ?>
+            <a href="logoutaction.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white w3-right w3-xlarge">Logout</a>
+        <?php else: ?>
+            <a href="login.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white w3-right w3-xlarge">Login</a>
+        <?php endif; ?>
+    </div>
 </div>
 <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-black w3-top" style="display:none" id="mySidebar">
   <button class="w3-bar-item w3-button w3-large"
@@ -37,41 +49,6 @@ require 'DBConnect.php';
     </div>
   <?php endif; ?>
 </div>
-
-<!--<div id="main">
-    <div class="w3-cell-row" style="width:100%">
-    <div class="w3-container w3-blue w3-cell">
-        <a href="welcomeAdmin.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white"><h2>Home</h2></a>
-        <a href="sorry.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white"><h2>About</h2></a>
-        <a href="sorry.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white"><h2>Contact</h2></a>
-    </div>
-        
-    <div class="w3-container w3-blue w3-cell w3-center">
-        <button id="openNav" class="w3-button w3-blue w3-hover-black w3-hover-text-white w3-left" onclick="w3_open()"><h1>MathMatch <?php "\n" ?> </button>
-        <?php if (isset($_SESSION['username']) && ($_SESSION['usertype']) == 1): ?>
-            <br>
-            <h3>Welcome, <?php echo $_SESSION['username'] ?></h3>
-        <?php endif; ?>
-    </div>
-        
-    <div class="w3-container w3-blue w3-cell"> 
-        &nbsp;
-    </div>
-
-       
-    <div class="w3-container w3-blue w3-cell">
-        <input type="text" class="w3-bar-item w3-input w3-margin-top" placeholder="Search..">
-        <a href="#" class="w3-bar-item w3-button w3-black w3-hover-blue w3-hover-text-black">Go</a>
-        <div class="w3-right">
-            <a href="signup.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white boxed"><b>Sign Up!</b></a>
-        </div>
-        <div class="w3-right">
-            <a href="login.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white
-               "><b>Login</b></a>
-    </div>
-      
-</div>
-      </div>-->
  
 <script>
 function w3_open() {
