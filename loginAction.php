@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 // ── 2. Collect and sanitise inputs ──────────────────────────
 $username = trim($_POST['username'] ?? '');
-$password = trim($_POST['password'] ?? '');
+$password =      $_POST['password'] ?? '';
 
 // If either field is empty, send straight back to login
 if ($username === '' || $password === '') {

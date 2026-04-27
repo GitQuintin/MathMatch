@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathMatch – Verification Failed</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
-    <?php include 'header.php' ?>
+<?php $pageTitle = 'Verification Failed'; ?>
+<?php include 'header.php'; ?>
     <?php include 'chalkboard-bg.php'; ?>
     <style>
 
@@ -104,15 +97,12 @@
             color: var(--chalk-white);
         }
     </style>
-</head>
-<body>
 
 <div class="page">
     <div class="card">
         <div class="icon"><i class="fa-solid fa-circle-xmark"></i></div>
         <h1><strong>Verification Failed</strong></h1>
         <p>
-            We couldn't verify your identity.<br>
             The username or security answer did not match our records.
         </p>
         <div class="btn-row">
@@ -127,5 +117,3 @@
 </div>
 
 <?php include 'footer.php' ?>
-</body>
-</html>
