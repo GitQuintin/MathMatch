@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathMatch – Forgot Password</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
-    <?php include 'header.php' ?>
+<?php $pageTitle = 'Forgot Password'; ?>
+<?php include 'header.php'; ?>
     <?php include 'chalkboard-bg.php'; ?>
     <style>
 
@@ -73,7 +66,6 @@
             text-transform: uppercase;
             color: var(--chalk-dim);
             margin-bottom: 0.5rem;
-            font-family: 'JetBrains Mono', monospace;
             font-weight: 300;
         }
 
@@ -97,7 +89,6 @@
             border: 1px solid rgba(240,236,224,0.15);
             border-radius: 2px;
             color: var(--chalk-white);
-            font-family: 'JetBrains Mono', monospace;
             font-size: 0.95rem;
             font-weight: 300;
             outline: none;
@@ -158,8 +149,6 @@
             color: var(--chalk-white);
         }
     </style>
-</head>
-<body>
 
 <div class="page">
     <div class="card">
@@ -200,5 +189,3 @@
 </div>
 
 <?php include 'footer.php' ?>
-</body>
-</html>

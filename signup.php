@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathMatch – Sign Up</title>
-    <?php include 'header.php' ?>
+<?php $pageTitle = 'Sign Up'; ?>
+<?php include 'header.php'; ?>
     <?php include 'chalkboard-bg.php'; ?>
-</head>
-<body>
 
 <?php
 // Show error feedback from signupAction.php redirects
@@ -29,7 +22,7 @@ if ($err && isset($errors[$err])): ?>
     <h3>Sign Up Form</h3>
     <p>Please complete and submit the form.</p>
 
-    <form name="signup" action="signupAction.php" method="POST" class="was-validated">
+    <form name="signup" action="signupAction.php" method="POST" novalidate>
         <div class="mb-3 mt-3">
             <label for="uname" class="form-label">Username:</label>
             <input class="form-control" placeholder="Enter username" name="uname"
@@ -75,5 +68,3 @@ if ($err && isset($errors[$err])): ?>
 </div>
 
 <?php include 'footer.php' ?>
-</body>
-</html>

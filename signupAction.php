@@ -72,14 +72,15 @@ if ($check->fetch()) {
     exit;
 }
 
-// ── Hash password and insert ─────────────────────────────────
-$hashed = password_hash($pswd, PASSWORD_DEFAULT);
+// ── Hash password and security answer before insert ─────────
+$hashed        = password_hash($pswd,                   PASSWORD_DEFAULT);
+$hashedAnswer  = password_hash(strtolower($answer),     PASSWORD_DEFAULT);
 
 // usertype = 1 (student by default)
 // is_tutor, TT1_ID, TT2_ID, TT3_ID all have DB defaults (0 / NULL) — omit them
 $stmt = $pdo->prepare(
     'INSERT INTO users (usertype, username, user_email, password, security_question, security_answer)
-     VALUES (3, :uname, :email, :pswd, :question, :answer)'
+     VALUES (1, :uname, :email, :pswd, :question, :answer)'
 );
 
 try {
@@ -88,7 +89,7 @@ try {
         ':email'    => $email,
         ':pswd'     => $hashed,
         ':question' => $question,
-        ':answer'   => $answer,
+        ':answer'   => $hashedAnswer,
     ]);
 } catch (PDOException $e) {
     error_log('Signup insert failed: ' . $e->getMessage());
