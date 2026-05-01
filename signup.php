@@ -13,12 +13,12 @@ $errors = [
 ];
 $err = $_GET['error'] ?? '';
 if ($err && isset($errors[$err])): ?>
-    <div class="container w-75 mt-3">
+    <div class="container w-75 mt-5">
         <div class="alert alert-danger"><?php echo htmlspecialchars($errors[$err]); ?></div>
     </div>
 <?php endif; ?>
 
-<div class="container w-75 mt-3">
+<div class="container w-75 mt-5 pt-5" style="flex: 1;">
     <h3>Sign Up Form</h3>
     <p>Please complete and submit the form.</p>
 

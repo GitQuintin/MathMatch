@@ -38,7 +38,7 @@ html {
 }
 
 body {
-    min-height: 100%;
+    min-height: 100vh;
     font-family: 'Crimson Pro', Georgia, serif;
     background-color: var(--board-dark);
     color: var(--chalk-white);
@@ -111,15 +111,15 @@ body::before {
 </head>
 <body>
 
-<div class="w3-bar w3-top w3-blue" id="main">
-    <button id="openNav" class="w3-bar-item w3-button w3-blue w3-hover-black w3-hover-text-white w3-left w3-xlarge" onclick="w3_open()">MathMatch</button>
-    <a href="index.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white w3-xlarge">Home</a>
-    <a href="about.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white w3-xlarge">About</a>
-    <a href="signup.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white w3-right w3-xlarge">Sign Up!</a>
-    <a href="login.php" class="w3-bar-item w3-button w3-hover-black w3-text-black w3-hover-text-white w3-right w3-xlarge">Login</a>
+<div class="w3-bar w3-top w3-green" id="main">
+    <button id="openNav" class="w3-bar-item w3-button w3-lime w3-hover-white w3-left w3-xlarge" onclick="w3_open()">MathMatch</button>
+    <a href="index.php" class="w3-bar-item w3-button w3-hover-white w3-text-black w3-xlarge">Home</a>
+    <!--<a href="about.php" class="w3-bar-item w3-button w3-hover-white w3-text-black w3-xlarge">About</a>-->
+    <a href="signup.php" class="w3-bar-item w3-button w3-hover-white w3-text-black w3-right w3-xlarge">Sign Up!</a>
+    <a href="login.php" class="w3-bar-item w3-button w3-hover-white w3-text-black w3-right w3-xlarge">Login</a>
 </div>
 
-<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-black w3-top" style="display:none" id="mySidebar">
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-lime w3-top" style="display:none" id="mySidebar">
   <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
   <a href="Sorry.php" class="w3-bar-item w3-button">Tutoring</a>
   <a href="Sorry.php" class="w3-bar-item w3-button">Question Board</a>
